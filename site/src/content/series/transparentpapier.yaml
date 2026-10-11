@@ -1,0 +1,57 @@
+title:
+  de: Transparentpapier.
+  en: Tracing Paper
+order: 120
+lang: de
+translation: reviewed
+description:
+  de: |
+    Wort und Unwort, Wort und Synonym.\
+    Hieroglyphen mit SF-Weekly-Buchstaben, Ziffern, Symbolen und Worten.\
+    Cut-out und Graphit in und auf einem Sandwich aus Transparentpapieren mit Vinylkleber.\
+    Die Größen variieren.\
+    seit 1997
+  en: |
+    Word and taboo word, word and synonym.\
+    Hieroglyphics paired with letters, numbers, symbols and words from the SF-Weekly.
+
+    Cut-out and graphite in and on a sandwich of tracing paper with vinyl adhesive.\
+    Varying dimensions.\
+    since 1997
+works:
+  - slug: t05
+    src: /media/gallery/transparentpapier/T05.jpg
+    title: dienstags
+  - slug: t01
+    src: /media/gallery/transparentpapier/T01.jpg
+    title: dienstags
+  - slug: t06
+    src: /media/gallery/transparentpapier/T06.jpg
+    title: dienstags
+  - slug: t03
+    src: /media/gallery/transparentpapier/T03.jpg
+    title: dienstags
+  - slug: t04
+    src: /media/gallery/transparentpapier/T04.jpg
+    title: dienstags
+  - slug: t09
+    src: /media/gallery/transparentpapier/T09.jpg
+    title: dienstags
+  - slug: t11
+    src: /media/gallery/transparentpapier/T11.jpg
+    title: dienstags
+  - slug: t07
+    src: /media/gallery/transparentpapier/T07.jpg
+    title: dienstags
+  - slug: t12
+    src: /media/gallery/transparentpapier/T12.jpg
+    title: dienstags
+  - slug: t08
+    src: /media/gallery/transparentpapier/T08.jpg
+    title: dienstags
+  - slug: t02
+    src: /media/gallery/transparentpapier/T02.jpg
+    title: dienstags
+  - slug: t10
+    src: /media/gallery/transparentpapier/T10.jpg
+    title: dienstags

@@ -1,0 +1,32 @@
+title:
+  de: The History of Time Travel.
+order: 50
+lang: de
+translation: reviewed
+description:
+  de: |
+    Mischtechnik auf Holz oder Papier in Wachs oder Acrylmedium.\
+    Die Größen variieren zwischen 15×15 cm und 80×40 cm\
+    Seit 2002
+  en: |
+    mixed media on wood or paper in wax or acrylic medium.\
+    since 2002
+works:
+  - slug: checking-the-system
+    src: /media/gallery/the-history-of-time-travel/Quer03.jpg
+    title: checking the system
+  - slug: fasten-your-seat-belt
+    src: /media/gallery/the-history-of-time-travel/Quer04.jpg
+    title: fasten your seat belt
+  - slug: travel-guide
+    src: /media/gallery/the-history-of-time-travel/Quer01.jpg
+    title: travel guide
+  - slug: getting-ready
+    src: /media/gallery/the-history-of-time-travel/Quer02.jpg
+    title: getting ready
+  - slug: countdown
+    src: /media/gallery/the-history-of-time-travel/Quer05.jpg
+    title: countdown
+  - slug: take-off
+    src: /media/gallery/the-history-of-time-travel/Quer06.jpg
+    title: take-off

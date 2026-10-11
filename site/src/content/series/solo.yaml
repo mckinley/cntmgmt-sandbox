@@ -1,0 +1,78 @@
+title:
+  de: solo.
+  en: solo
+order: 100
+lang: de
+translation: reviewed
+description:
+  de: |
+    Basiert auf Tuschezeichnungen. Inspiriert durch endlosen Hören einer Detektivinnen-Geschichte in Madrid – auf Spanisch – beim Selbstversuch die Sprache ohne Extra-Aufwand zu erlernen.\
+    Acryl auf Leim auf Leinwand.\
+    20×20 cm, 123×63 cm, 123×83 cm\
+    2006
+  en: |
+    This series of work is based on an almost endless listening to a spanish audio book while trying to learn the language without any extra effort. The story was on a detective solving a crime in Madrid.\
+    Acrylic on canvas.\
+    20 × 20 cm, 123 × 63 cm, 123 × 83 cm\
+    2006
+works:
+  - slug: solo3
+    src: /media/gallery/solo/solo3.jpg
+    title: sòlo
+  - slug: solo11
+    src: /media/gallery/solo/solo11.jpg
+    title: sòlo
+  - slug: pero-pero-pero
+    src: /media/gallery/solo/canvas2_2.jpg
+    title: pero, pero, pero
+  - slug: solo4
+    src: /media/gallery/solo/solo4.jpg
+    title: sòlo
+  - slug: solo12
+    src: /media/gallery/solo/solo12.jpg
+    title: sòlo
+  - slug: solo9
+    src: /media/gallery/solo/solo9.jpg
+    title: sòlo
+  - slug: solo17
+    src: /media/gallery/solo/solo17.jpg
+    title: sòlo
+  - slug: solo7
+    src: /media/gallery/solo/solo7.jpg
+    title: sòlo
+  - slug: solo15
+    src: /media/gallery/solo/solo15.jpg
+    title: sòlo
+  - slug: la-frase-clasica
+    src: /media/gallery/solo/canvas6_2.jpg
+    title: la frase clásica
+  - slug: solo20
+    src: /media/gallery/solo/solo20.jpg
+    title: sòlo
+  - slug: solo1
+    src: /media/gallery/solo/solo1.jpg
+    title: sòlo
+  - slug: mucho-interes
+    src: /media/gallery/solo/canvas3_2.jpg
+    title: mucho intéres
+  - slug: solo2
+    src: /media/gallery/solo/solo2.jpg
+    title: sòlo
+  - slug: solo18
+    src: /media/gallery/solo/solo18.jpg
+    title: sòlo
+  - slug: corriendo
+    src: /media/gallery/solo/canvas5_2.jpg
+    title: corriendo
+  - slug: solo19
+    src: /media/gallery/solo/solo19.jpg
+    title: sòlo
+  - slug: solo13
+    src: /media/gallery/solo/solo13.jpg
+    title: sòlo
+  - slug: solo6
+    src: /media/gallery/solo/solo6.jpg
+    title: sòlo
+  - slug: solo14
+    src: /media/gallery/solo/solo14.jpg
+    title: sòlo

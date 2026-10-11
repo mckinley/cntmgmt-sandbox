@@ -1,0 +1,1397 @@
+{
+  "site": {
+    "root": "site",
+    "framework": "astro",
+    "schema": "site/cntmgmt.schema.json",
+    "productionUrl": "https://circlefly.de",
+    "deploy": {
+      "signal": {
+        "type": "check",
+        "name": "deploy-site"
+      }
+    }
+  },
+  "ui": {
+    "navigation": [
+      {
+        "label": "Inhalte",
+        "items": [
+          "news",
+          "series"
+        ]
+      },
+      {
+        "label": "Seiten",
+        "items": [
+          "home",
+          "gallery",
+          "vita",
+          "contact",
+          "newsletter",
+          "impressum",
+          "special"
+        ]
+      },
+      {
+        "label": "Einstellungen",
+        "items": [
+          "settings"
+        ]
+      }
+    ]
+  },
+  "i18n": {
+    "locales": [
+      {
+        "code": "de",
+        "label": "Deutsch"
+      },
+      {
+        "code": "en",
+        "label": "English"
+      }
+    ],
+    "default": "de",
+    "originalField": "lang",
+    "statusField": "translation",
+    "markOutdatedOnChange": true
+  },
+  "media": {
+    "path": "site/public/media",
+    "publicUrl": "/media",
+    "allowedTypes": [
+      "image/jpeg",
+      "image/png",
+      "image/webp",
+      "image/heic",
+      "application/pdf"
+    ],
+    "maxFileSize": 31457280,
+    "image": {
+      "maxEdge": 2400,
+      "format": "image/jpeg",
+      "quality": 0.85,
+      "stripMetadata": true
+    },
+    "filename": "{slug(name)}.{ext}"
+  },
+  "collections": [
+    {
+      "name": "news",
+      "label": "Aktuelles",
+      "labelSingular": "Beitrag",
+      "path": "site/src/content/news",
+      "format": "yaml",
+      "source": "manual",
+      "filename": "{date}-{slug(title)}",
+      "create": {
+        "defaults": {
+          "date": {
+            "kind": "today"
+          }
+        }
+      },
+      "list": {
+        "title": "title",
+        "subtitle": "date",
+        "thumbnail": "images.0.src",
+        "sort": "-date",
+        "groupBy": "year(date)",
+        "search": [
+          "title",
+          "body"
+        ],
+        "badges": [
+          "translation"
+        ],
+        "filters": [
+          {
+            "label": "Übersetzung prüfen",
+            "where": {
+              "translation": [
+                "machine",
+                "outdated"
+              ]
+            }
+          }
+        ]
+      },
+      "preview": {
+        "path": "/news/{slug}/",
+        "locales": {
+          "en": "/en/news/{slug}/"
+        }
+      },
+      "schema": {
+        "title": {
+          "type": "object",
+          "label": "Titel",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          },
+          "description": "Pflicht in der Originalsprache."
+        },
+        "date": {
+          "type": "date",
+          "label": "Datum",
+          "description": "Wird angezeigt und bestimmt die Reihenfolge.",
+          "validation": {
+            "isRequired": true
+          }
+        },
+        "lang": {
+          "type": "select",
+          "label": "Originalsprache",
+          "description": "In welcher Sprache der Text ursprünglich geschrieben ist.",
+          "options": [
+            {
+              "label": "Deutsch",
+              "value": "de"
+            },
+            {
+              "label": "Englisch",
+              "value": "en"
+            }
+          ],
+          "defaultValue": "de"
+        },
+        "translation": {
+          "type": "select",
+          "label": "Übersetzung",
+          "description": "Stand der Übersetzung in die andere Sprache.",
+          "options": [
+            {
+              "label": "keine",
+              "value": "none"
+            },
+            {
+              "label": "maschinell – bitte prüfen",
+              "value": "machine"
+            },
+            {
+              "label": "geprüft",
+              "value": "reviewed"
+            },
+            {
+              "label": "veraltet",
+              "value": "outdated"
+            }
+          ],
+          "defaultValue": "none"
+        },
+        "images": {
+          "type": "array",
+          "label": "Bilder",
+          "description": "Das erste Bild ist der Flyer.",
+          "validation": {
+            "length": {
+              "max": 12
+            }
+          },
+          "element": {
+            "type": "object",
+            "label": "Bild",
+            "fields": {
+              "src": {
+                "type": "image",
+                "label": "Bild",
+                "storage": "string",
+                "directory": "site/public/media/news",
+                "description": "Adresse wie /media/news/2025/flyer.jpg. Die Medienauswahl speichert heute noch den Repo-Pfad (site/public/…); bitte im Reiter „URL“ /media/… eintragen.",
+                "validation": {
+                  "isRequired": true
+                }
+              },
+              "title": {
+                "type": "text",
+                "label": "Bildtitel"
+              },
+              "caption": {
+                "type": "object",
+                "label": "Bildunterschrift",
+                "layout": [
+                  6,
+                  6
+                ],
+                "fields": {
+                  "de": {
+                    "type": "text",
+                    "label": "Deutsch",
+                    "multiline": true
+                  },
+                  "en": {
+                    "type": "text",
+                    "label": "English",
+                    "multiline": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "body": {
+          "type": "object",
+          "label": "Text",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "markdown",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "markdown",
+              "label": "English"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "series",
+      "label": "Werkreihen",
+      "labelSingular": "Werkreihe",
+      "path": "site/src/content/series",
+      "format": "yaml",
+      "source": "manual",
+      "filename": "{slug(title)}",
+      "create": {
+        "defaults": {
+          "order": 0
+        }
+      },
+      "list": {
+        "title": "title",
+        "thumbnail": [
+          "cover",
+          "works.0.src"
+        ],
+        "subtitle": "count(works)",
+        "sort": "order"
+      },
+      "preview": {
+        "path": "/gallery/{slug}/",
+        "locales": {
+          "en": "/en/gallery/{slug}/"
+        }
+      },
+      "schema": {
+        "title": {
+          "type": "object",
+          "label": "Titel",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          },
+          "description": "Pflicht in der Originalsprache."
+        },
+        "order": {
+          "type": "integer",
+          "label": "Reihenfolge",
+          "description": "Kleinere Zahl = weiter oben in der Galerie.",
+          "validation": {
+            "isRequired": true
+          }
+        },
+        "lang": {
+          "type": "select",
+          "label": "Originalsprache",
+          "description": "In welcher Sprache der Text ursprünglich geschrieben ist.",
+          "options": [
+            {
+              "label": "Deutsch",
+              "value": "de"
+            },
+            {
+              "label": "Englisch",
+              "value": "en"
+            }
+          ],
+          "defaultValue": "de"
+        },
+        "translation": {
+          "type": "select",
+          "label": "Übersetzung",
+          "description": "Stand der Übersetzung in die andere Sprache.",
+          "options": [
+            {
+              "label": "keine",
+              "value": "none"
+            },
+            {
+              "label": "maschinell – bitte prüfen",
+              "value": "machine"
+            },
+            {
+              "label": "geprüft",
+              "value": "reviewed"
+            },
+            {
+              "label": "veraltet",
+              "value": "outdated"
+            }
+          ],
+          "defaultValue": "none"
+        },
+        "description": {
+          "type": "object",
+          "label": "Beschreibung",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "markdown",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "markdown",
+              "label": "English"
+            }
+          }
+        },
+        "cover": {
+          "type": "image",
+          "label": "Titelbild (optional)",
+          "storage": "string",
+          "directory": "site/public/media/gallery",
+          "description": "Adresse wie /media/news/2025/flyer.jpg. Die Medienauswahl speichert heute noch den Repo-Pfad (site/public/…); bitte im Reiter „URL“ /media/… eintragen."
+        },
+        "works": {
+          "type": "array",
+          "label": "Werke",
+          "description": "Reihenfolge per Ziehen. Die Adresse eines Werks (slug) bleibt erhalten und wird hier nicht angezeigt.",
+          "validation": {
+            "length": {
+              "min": 1
+            }
+          },
+          "element": {
+            "type": "object",
+            "label": "Werk",
+            "fields": {
+              "src": {
+                "type": "image",
+                "label": "Bild",
+                "storage": "string",
+                "directory": "site/public/media/gallery",
+                "description": "Adresse wie /media/news/2025/flyer.jpg. Die Medienauswahl speichert heute noch den Repo-Pfad (site/public/…); bitte im Reiter „URL“ /media/… eintragen.",
+                "validation": {
+                  "isRequired": true
+                }
+              },
+              "title": {
+                "type": "text",
+                "label": "Werktitel"
+              },
+              "caption": {
+                "type": "object",
+                "label": "Angaben (Technik, Maße, Jahr)",
+                "layout": [
+                  6,
+                  6
+                ],
+                "fields": {
+                  "de": {
+                    "type": "text",
+                    "label": "Deutsch",
+                    "multiline": true
+                  },
+                  "en": {
+                    "type": "text",
+                    "label": "English",
+                    "multiline": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "name": "settings",
+      "label": "Website",
+      "path": "site/src/content/settings/index.yaml",
+      "format": "yaml",
+      "source": "manual",
+      "schema": {
+        "title": {
+          "type": "text",
+          "label": "Name der Website",
+          "validation": {
+            "isRequired": true
+          }
+        },
+        "subtitle": {
+          "type": "object",
+          "label": "Untertitel",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          }
+        },
+        "contactEmail": {
+          "type": "text",
+          "label": "Empfänger Kontaktformular",
+          "description": "Wirkt nach dem nächsten Veröffentlichen.",
+          "validation": {
+            "isRequired": true,
+            "pattern": {
+              "regex": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
+              "message": "Bitte eine E-Mail-Adresse eingeben."
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "home",
+      "label": "Startseite",
+      "path": "site/src/content/pages/home/index.yaml",
+      "format": "yaml",
+      "source": "manual",
+      "schema": {
+        "title": {
+          "type": "object",
+          "label": "Titel",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          },
+          "description": "Überschrift der Seite."
+        },
+        "navLabel": {
+          "type": "object",
+          "label": "Name im Menü",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          }
+        },
+        "lang": {
+          "type": "select",
+          "label": "Originalsprache",
+          "description": "In welcher Sprache der Text ursprünglich geschrieben ist.",
+          "options": [
+            {
+              "label": "Deutsch",
+              "value": "de"
+            },
+            {
+              "label": "Englisch",
+              "value": "en"
+            }
+          ],
+          "defaultValue": "de"
+        },
+        "translation": {
+          "type": "select",
+          "label": "Übersetzung",
+          "description": "Stand der Übersetzung in die andere Sprache.",
+          "options": [
+            {
+              "label": "keine",
+              "value": "none"
+            },
+            {
+              "label": "maschinell – bitte prüfen",
+              "value": "machine"
+            },
+            {
+              "label": "geprüft",
+              "value": "reviewed"
+            },
+            {
+              "label": "veraltet",
+              "value": "outdated"
+            }
+          ],
+          "defaultValue": "none"
+        },
+        "headerImage": {
+          "type": "image",
+          "label": "Kopfbild",
+          "storage": "string",
+          "directory": "site/public/media/pages/home",
+          "description": "Adresse wie /media/news/2025/flyer.jpg. Die Medienauswahl speichert heute noch den Repo-Pfad (site/public/…); bitte im Reiter „URL“ /media/… eintragen."
+        },
+        "body": {
+          "type": "object",
+          "label": "Text",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "markdown",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "markdown",
+              "label": "English"
+            }
+          }
+        }
+      },
+      "preview": {
+        "path": "/",
+        "locales": {
+          "en": "/en/"
+        }
+      }
+    },
+    {
+      "name": "gallery",
+      "label": "Galerie",
+      "path": "site/src/content/pages/gallery/index.yaml",
+      "format": "yaml",
+      "source": "manual",
+      "schema": {
+        "title": {
+          "type": "object",
+          "label": "Titel",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          },
+          "description": "Überschrift der Seite."
+        },
+        "navLabel": {
+          "type": "object",
+          "label": "Name im Menü",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          }
+        },
+        "lang": {
+          "type": "select",
+          "label": "Originalsprache",
+          "description": "In welcher Sprache der Text ursprünglich geschrieben ist.",
+          "options": [
+            {
+              "label": "Deutsch",
+              "value": "de"
+            },
+            {
+              "label": "Englisch",
+              "value": "en"
+            }
+          ],
+          "defaultValue": "de"
+        },
+        "translation": {
+          "type": "select",
+          "label": "Übersetzung",
+          "description": "Stand der Übersetzung in die andere Sprache.",
+          "options": [
+            {
+              "label": "keine",
+              "value": "none"
+            },
+            {
+              "label": "maschinell – bitte prüfen",
+              "value": "machine"
+            },
+            {
+              "label": "geprüft",
+              "value": "reviewed"
+            },
+            {
+              "label": "veraltet",
+              "value": "outdated"
+            }
+          ],
+          "defaultValue": "none"
+        },
+        "headerImage": {
+          "type": "image",
+          "label": "Kopfbild",
+          "storage": "string",
+          "directory": "site/public/media/pages/gallery",
+          "description": "Adresse wie /media/news/2025/flyer.jpg. Die Medienauswahl speichert heute noch den Repo-Pfad (site/public/…); bitte im Reiter „URL“ /media/… eintragen."
+        },
+        "body": {
+          "type": "object",
+          "label": "Text",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "markdown",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "markdown",
+              "label": "English"
+            }
+          }
+        }
+      },
+      "preview": {
+        "path": "/gallery/",
+        "locales": {
+          "en": "/en/gallery/"
+        }
+      }
+    },
+    {
+      "name": "vita",
+      "label": "Vita",
+      "path": "site/src/content/pages/vita/index.yaml",
+      "format": "yaml",
+      "source": "manual",
+      "schema": {
+        "title": {
+          "type": "object",
+          "label": "Titel",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          },
+          "description": "Überschrift der Seite."
+        },
+        "navLabel": {
+          "type": "object",
+          "label": "Name im Menü",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          }
+        },
+        "lang": {
+          "type": "select",
+          "label": "Originalsprache",
+          "description": "In welcher Sprache der Text ursprünglich geschrieben ist.",
+          "options": [
+            {
+              "label": "Deutsch",
+              "value": "de"
+            },
+            {
+              "label": "Englisch",
+              "value": "en"
+            }
+          ],
+          "defaultValue": "de"
+        },
+        "translation": {
+          "type": "select",
+          "label": "Übersetzung",
+          "description": "Stand der Übersetzung in die andere Sprache.",
+          "options": [
+            {
+              "label": "keine",
+              "value": "none"
+            },
+            {
+              "label": "maschinell – bitte prüfen",
+              "value": "machine"
+            },
+            {
+              "label": "geprüft",
+              "value": "reviewed"
+            },
+            {
+              "label": "veraltet",
+              "value": "outdated"
+            }
+          ],
+          "defaultValue": "none"
+        },
+        "headerImage": {
+          "type": "image",
+          "label": "Kopfbild",
+          "storage": "string",
+          "directory": "site/public/media/pages/vita",
+          "description": "Adresse wie /media/news/2025/flyer.jpg. Die Medienauswahl speichert heute noch den Repo-Pfad (site/public/…); bitte im Reiter „URL“ /media/… eintragen."
+        },
+        "body": {
+          "type": "object",
+          "label": "Text",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "markdown",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "markdown",
+              "label": "English"
+            }
+          }
+        }
+      },
+      "preview": {
+        "path": "/vita/",
+        "locales": {
+          "en": "/en/vita/"
+        }
+      }
+    },
+    {
+      "name": "contact",
+      "label": "Kontakt",
+      "path": "site/src/content/pages/contact/index.yaml",
+      "format": "yaml",
+      "source": "manual",
+      "schema": {
+        "title": {
+          "type": "object",
+          "label": "Titel",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          },
+          "description": "Überschrift der Seite."
+        },
+        "navLabel": {
+          "type": "object",
+          "label": "Name im Menü",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          }
+        },
+        "lang": {
+          "type": "select",
+          "label": "Originalsprache",
+          "description": "In welcher Sprache der Text ursprünglich geschrieben ist.",
+          "options": [
+            {
+              "label": "Deutsch",
+              "value": "de"
+            },
+            {
+              "label": "Englisch",
+              "value": "en"
+            }
+          ],
+          "defaultValue": "de"
+        },
+        "translation": {
+          "type": "select",
+          "label": "Übersetzung",
+          "description": "Stand der Übersetzung in die andere Sprache.",
+          "options": [
+            {
+              "label": "keine",
+              "value": "none"
+            },
+            {
+              "label": "maschinell – bitte prüfen",
+              "value": "machine"
+            },
+            {
+              "label": "geprüft",
+              "value": "reviewed"
+            },
+            {
+              "label": "veraltet",
+              "value": "outdated"
+            }
+          ],
+          "defaultValue": "none"
+        },
+        "headerImage": {
+          "type": "image",
+          "label": "Kopfbild",
+          "storage": "string",
+          "directory": "site/public/media/pages/contact",
+          "description": "Adresse wie /media/news/2025/flyer.jpg. Die Medienauswahl speichert heute noch den Repo-Pfad (site/public/…); bitte im Reiter „URL“ /media/… eintragen."
+        },
+        "body": {
+          "type": "object",
+          "label": "Text",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "markdown",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "markdown",
+              "label": "English"
+            }
+          }
+        }
+      },
+      "preview": {
+        "path": "/contact/",
+        "locales": {
+          "en": "/en/contact/"
+        }
+      }
+    },
+    {
+      "name": "newsletter",
+      "label": "Newsletter",
+      "path": "site/src/content/pages/newsletter/index.yaml",
+      "format": "yaml",
+      "source": "manual",
+      "schema": {
+        "title": {
+          "type": "object",
+          "label": "Titel",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          },
+          "description": "Überschrift der Seite."
+        },
+        "navLabel": {
+          "type": "object",
+          "label": "Name im Menü",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          }
+        },
+        "lang": {
+          "type": "select",
+          "label": "Originalsprache",
+          "description": "In welcher Sprache der Text ursprünglich geschrieben ist.",
+          "options": [
+            {
+              "label": "Deutsch",
+              "value": "de"
+            },
+            {
+              "label": "Englisch",
+              "value": "en"
+            }
+          ],
+          "defaultValue": "de"
+        },
+        "translation": {
+          "type": "select",
+          "label": "Übersetzung",
+          "description": "Stand der Übersetzung in die andere Sprache.",
+          "options": [
+            {
+              "label": "keine",
+              "value": "none"
+            },
+            {
+              "label": "maschinell – bitte prüfen",
+              "value": "machine"
+            },
+            {
+              "label": "geprüft",
+              "value": "reviewed"
+            },
+            {
+              "label": "veraltet",
+              "value": "outdated"
+            }
+          ],
+          "defaultValue": "none"
+        },
+        "headerImage": {
+          "type": "image",
+          "label": "Kopfbild",
+          "storage": "string",
+          "directory": "site/public/media/pages/newsletter",
+          "description": "Adresse wie /media/news/2025/flyer.jpg. Die Medienauswahl speichert heute noch den Repo-Pfad (site/public/…); bitte im Reiter „URL“ /media/… eintragen."
+        },
+        "body": {
+          "type": "object",
+          "label": "Text",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "markdown",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "markdown",
+              "label": "English"
+            }
+          }
+        }
+      },
+      "preview": {
+        "path": "/newsletter/",
+        "locales": {
+          "en": "/en/newsletter/"
+        }
+      }
+    },
+    {
+      "name": "impressum",
+      "label": "Impressum",
+      "path": "site/src/content/pages/impressum/index.yaml",
+      "format": "yaml",
+      "source": "manual",
+      "schema": {
+        "title": {
+          "type": "object",
+          "label": "Titel",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          },
+          "description": "Überschrift der Seite."
+        },
+        "navLabel": {
+          "type": "object",
+          "label": "Name im Menü",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          }
+        },
+        "lang": {
+          "type": "select",
+          "label": "Originalsprache",
+          "description": "In welcher Sprache der Text ursprünglich geschrieben ist.",
+          "options": [
+            {
+              "label": "Deutsch",
+              "value": "de"
+            },
+            {
+              "label": "Englisch",
+              "value": "en"
+            }
+          ],
+          "defaultValue": "de"
+        },
+        "translation": {
+          "type": "select",
+          "label": "Übersetzung",
+          "description": "Stand der Übersetzung in die andere Sprache.",
+          "options": [
+            {
+              "label": "keine",
+              "value": "none"
+            },
+            {
+              "label": "maschinell – bitte prüfen",
+              "value": "machine"
+            },
+            {
+              "label": "geprüft",
+              "value": "reviewed"
+            },
+            {
+              "label": "veraltet",
+              "value": "outdated"
+            }
+          ],
+          "defaultValue": "none"
+        },
+        "headerImage": {
+          "type": "image",
+          "label": "Kopfbild",
+          "storage": "string",
+          "directory": "site/public/media/pages/impressum",
+          "description": "Adresse wie /media/news/2025/flyer.jpg. Die Medienauswahl speichert heute noch den Repo-Pfad (site/public/…); bitte im Reiter „URL“ /media/… eintragen."
+        },
+        "body": {
+          "type": "object",
+          "label": "Text",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "markdown",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "markdown",
+              "label": "English"
+            }
+          }
+        },
+        "blocks": {
+          "type": "array",
+          "label": "Abschnitte",
+          "element": {
+            "type": "object",
+            "label": "Abschnitt",
+            "fields": {
+              "anchor": {
+                "type": "text",
+                "label": "Sprungmarke",
+                "description": "Teil der Adresse (/impressum/#…); nur Kleinbuchstaben, Ziffern, Bindestriche.",
+                "validation": {
+                  "isRequired": true,
+                  "pattern": {
+                    "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                    "message": "Nur Kleinbuchstaben, Ziffern und Bindestriche."
+                  }
+                }
+              },
+              "title": {
+                "type": "object",
+                "label": "Überschrift",
+                "layout": [
+                  6,
+                  6
+                ],
+                "fields": {
+                  "de": {
+                    "type": "text",
+                    "label": "Deutsch"
+                  },
+                  "en": {
+                    "type": "text",
+                    "label": "English"
+                  }
+                }
+              },
+              "image": {
+                "type": "image",
+                "label": "Bild",
+                "storage": "string",
+                "directory": "site/public/media/pages/impressum",
+                "description": "Adresse wie /media/news/2025/flyer.jpg. Die Medienauswahl speichert heute noch den Repo-Pfad (site/public/…); bitte im Reiter „URL“ /media/… eintragen."
+              },
+              "body": {
+                "type": "object",
+                "label": "Text",
+                "layout": [
+                  6,
+                  6
+                ],
+                "fields": {
+                  "de": {
+                    "type": "markdown",
+                    "label": "Deutsch"
+                  },
+                  "en": {
+                    "type": "markdown",
+                    "label": "English"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "path": "/impressum/",
+        "locales": {
+          "en": "/en/impressum/"
+        }
+      }
+    },
+    {
+      "name": "special",
+      "label": "Special",
+      "path": "site/src/content/pages/special/index.yaml",
+      "format": "yaml",
+      "source": "manual",
+      "schema": {
+        "title": {
+          "type": "object",
+          "label": "Titel",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          },
+          "description": "Überschrift der Seite."
+        },
+        "navLabel": {
+          "type": "object",
+          "label": "Name im Menü",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "text",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "text",
+              "label": "English"
+            }
+          }
+        },
+        "lang": {
+          "type": "select",
+          "label": "Originalsprache",
+          "description": "In welcher Sprache der Text ursprünglich geschrieben ist.",
+          "options": [
+            {
+              "label": "Deutsch",
+              "value": "de"
+            },
+            {
+              "label": "Englisch",
+              "value": "en"
+            }
+          ],
+          "defaultValue": "de"
+        },
+        "translation": {
+          "type": "select",
+          "label": "Übersetzung",
+          "description": "Stand der Übersetzung in die andere Sprache.",
+          "options": [
+            {
+              "label": "keine",
+              "value": "none"
+            },
+            {
+              "label": "maschinell – bitte prüfen",
+              "value": "machine"
+            },
+            {
+              "label": "geprüft",
+              "value": "reviewed"
+            },
+            {
+              "label": "veraltet",
+              "value": "outdated"
+            }
+          ],
+          "defaultValue": "none"
+        },
+        "headerImage": {
+          "type": "image",
+          "label": "Kopfbild",
+          "storage": "string",
+          "directory": "site/public/media/pages/special",
+          "description": "Adresse wie /media/news/2025/flyer.jpg. Die Medienauswahl speichert heute noch den Repo-Pfad (site/public/…); bitte im Reiter „URL“ /media/… eintragen."
+        },
+        "body": {
+          "type": "object",
+          "label": "Text",
+          "layout": [
+            6,
+            6
+          ],
+          "fields": {
+            "de": {
+              "type": "markdown",
+              "label": "Deutsch"
+            },
+            "en": {
+              "type": "markdown",
+              "label": "English"
+            }
+          }
+        },
+        "flash": {
+          "type": "array",
+          "label": "Flash-Präsentationen (nur Bronson)",
+          "readOnly": true,
+          "element": {
+            "type": "object",
+            "label": "Flash",
+            "fields": {
+              "src": {
+                "type": "text",
+                "label": "Datei"
+              },
+              "width": {
+                "type": "integer",
+                "label": "Breite"
+              },
+              "height": {
+                "type": "integer",
+                "label": "Höhe"
+              },
+              "poster": {
+                "type": "text",
+                "label": "Standbild"
+              }
+            }
+          }
+        }
+      },
+      "preview": {
+        "path": "/special/",
+        "locales": {
+          "en": "/en/special/"
+        }
+      }
+    }
+  ],
+  "team": []
+}

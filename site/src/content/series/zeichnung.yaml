@@ -1,0 +1,77 @@
+title:
+  de: Zeichnung.
+  en: drawing
+order: 130
+lang: de
+translation: reviewed
+description:
+  de: |
+    Graphit, Tusche auf Papier.\
+    Maximale Größe 100×70 cm\
+    Seit 2007\
+    wobei es schon eine vom Sommer 1998 gibt
+  en: |
+    Graphite, ink on paper.\
+    Maximum size 100 × 70 cm\
+    since 2007
+works:
+  - slug: eineschnur
+    src: /media/gallery/zeichnung/eineSchnur.jpg
+    title: eine Schnur
+  - slug: eineschnur1
+    src: /media/gallery/zeichnung/eineSchnur1.jpg
+    title: eine Schnur
+  - slug: eineschnur2
+    src: /media/gallery/zeichnung/eineSchnur2.jpg
+    title: eine Schnur
+  - slug: eineschnur3
+    src: /media/gallery/zeichnung/eineSchnur3.jpg
+    title: eine Schnur
+  - slug: eine-schnur-detail-5-x-4-9-cm
+    src: /media/gallery/zeichnung/eineSchnur3Detail.jpg
+    title: eine Schnur, Detail 5 x 4,9 cm
+  - slug: eine-linie-ein-bleistift
+    src: /media/gallery/zeichnung/eineLinie.jpg
+    title: eine Linie, ein Bleistift
+  - slug: alibi1
+    src: /media/gallery/zeichnung/Alibi1.jpg
+    title: Alibi.
+  - slug: alibi2
+    src: /media/gallery/zeichnung/Alibi2.jpg
+    title: Alibi.
+  - slug: alibi3
+    src: /media/gallery/zeichnung/Alibi3.jpg
+    title: Alibi.
+  - slug: alibi4
+    src: /media/gallery/zeichnung/Alibi4.jpg
+    title: Alibi.
+  - slug: alibi5
+    src: /media/gallery/zeichnung/Alibi5.jpg
+    title: Alibi.
+  - slug: alibi6
+    src: /media/gallery/zeichnung/Alibi6.jpg
+    title: Alibi.
+  - slug: alibi7
+    src: /media/gallery/zeichnung/Alibi7.jpg
+    title: Alibi.
+  - slug: alibi8
+    src: /media/gallery/zeichnung/Alibi8.jpg
+    title: Alibi.
+  - slug: alibi9
+    src: /media/gallery/zeichnung/Alibi9.jpg
+    title: Alibi.
+  - slug: alibit-t1
+    src: /media/gallery/zeichnung/AlibiT_t1.jpg
+    title: Alibi in Tüte
+  - slug: alibit-t2
+    src: /media/gallery/zeichnung/AlibiT_t2.jpg
+    title: Alibi in Tüte
+  - slug: alibit-t3
+    src: /media/gallery/zeichnung/AlibiT_t3.jpg
+    title: Alibi in Tüte
+  - slug: alibit-t4
+    src: /media/gallery/zeichnung/AlibiT_t4.jpg
+    title: Alibi in Tüte
+  - slug: alibi-shoppping
+    src: /media/gallery/zeichnung/AlibiT_t5.jpg
+    title: Alibi-Shoppping

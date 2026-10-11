@@ -1,0 +1,51 @@
+title:
+  de: Foto|Collage.
+  en: Photo|Collage.
+order: 150
+lang: de
+translation: reviewed
+description:
+  de: |
+    Fotos von kleinen Bildausschnitten aus dem SF Weekly und dem Guardian.\
+    Zwei Begriffswelten überlagern sich.
+
+    Titel: keine Namen, keine Telefonnummern
+
+    45 x 65 cm\
+    1997-1999
+  en: |
+    Photos of small Image-cut-outs from SF Weekly and the Guardian.\
+    Two differet Worlds of concept intersecting.
+
+    Title: no names, no phone numbers
+
+    45 × 65 cm\
+    1997-1999
+works:
+  - slug: minicrime1
+    src: /media/gallery/foto-collage/minicrime1.jpg
+    title: minicrime.
+  - slug: minicrime2
+    src: /media/gallery/foto-collage/minicrime2.jpg
+    title: minicrime.
+  - slug: minicrime3
+    src: /media/gallery/foto-collage/minicrime3.jpg
+    title: minicrime.
+  - slug: minicrime4
+    src: /media/gallery/foto-collage/minicrime4.jpg
+    title: minicrime.
+  - slug: minicrimespace1
+    src: /media/gallery/foto-collage/minicrimeSpace1.jpg
+    title: being an alien.
+  - slug: minicrimespace2
+    src: /media/gallery/foto-collage/minicrimeSpace2.jpg
+    title: being an alien.
+  - slug: schuss
+    src: /media/gallery/foto-collage/Schuss.jpg
+    title: Schuss.
+  - slug: ocean-beach
+    src: /media/gallery/foto-collage/oceanbeach.jpg
+    title: ocean beach
+  - slug: ping-pong-1
+    src: /media/gallery/foto-collage/1-RGB-schwRand-20x20.jpg
+    title: Ping Pong_1

@@ -1,0 +1,27 @@
+title:
+  de: Special
+  en: Special
+navLabel:
+  de: special
+  en: special
+lang: de
+translation: reviewed
+headerImage: /media/pages/special/4.jpg
+body:
+  de: |
+    Hier gibt es einige Spezial-Präsentationen meiner Mafia-Boxen.
+  en: |
+    Here are some special presentations of my Mafia-Boxes.
+flash:
+  - src: /media/pages/special/Box1.swf
+    width: 800
+    height: 600
+    poster: /media/pages/special/poster-39-layer1.jpg
+  - src: /media/pages/special/Box2.swf
+    width: 800
+    height: 600
+    poster: /media/pages/special/poster-40-1.jpg
+  - src: /media/pages/special/Box3.swf
+    width: 800
+    height: 600
+    poster: /media/pages/special/poster-41-1.jpg

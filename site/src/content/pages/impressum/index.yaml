@@ -1,0 +1,94 @@
+title:
+  de: Impressum
+  en: Legal notice
+navLabel:
+  de: Impressum
+  en: Impressum
+lang: de
+translation: reviewed
+headerImage: /media/pages/impressum/img42-1.jpg
+blocks:
+  - anchor: site-by
+    title:
+      de: Site by Propel Graphics
+    image: /media/pages/impressum/2.jpg
+    body:
+      de: |
+        Diese Webseite wurde designed und programmiert von Kathrin Feser und Bronson McKinley. Besuchen Sie unsere [Graphic Design und Internet Publishing Webseite](http://propelgraphics.com) um weitere unserer kollaborativen Arbeiten zu sehen. Wir fokussieren auf wirkungsvolles zeitgenössisches Design sowie benutzerfreundliche, leicht zugängliche und mühelos zu bedienende Internet Applikationen.
+      en: |
+        This site was designed and programmed by Kathrin Feser and Bronson McKinley. You can visit our [graphic design and internet publishing website](http://propelgraphics.com) to see some more of our collaborative work. We focus on practical contemporary design and usable, accessible, and manageable internet applications.
+  - anchor: rss-feed
+    title:
+      de: RSS-Feed
+      en: Syndicate
+    image: /media/pages/impressum/10.jpg
+    body:
+      de: |
+        [Abonnieren Sie Circlefly Feed](/rss.xml). Wir haben ein Circlefly Nachrichten RSS-Feed sowohl auf [Deutsch](/rss.xml) als auch auf [Englisch](/en/rss.xml).
+
+        Sollten Sie noch keine Erfahrungen mit Internet-Feeds gesammelt haben, dann können Sie mehr darüber erfahren bei [wikipedia](http://en.wikipedia.org/wiki/Web_feed) oder bei [Google FeedBurner Help Center](http://www.google.com/support/feedburner/bin/answer.py?answer=79408). Es ist sehr wahrscheinlich, dass Sie, wenn Sie erst einmal damit begonnen haben RSS-Feeds im Internet zu abonnieren, sich fragen werden wie es möglich gewesen war vorher ohne diese Feeds zu existieren.
+      en: |
+        [Subscribe to the Circlefly Feed](/en/rss.xml). There is a feed for both the [German](/rss.xml) and [English](/en/rss.xml) versions of Circlefly News.
+
+        If you are unfamiliar with web feeds you can find out more about them at [wikipedia](http://en.wikipedia.org/wiki/Web_feed) or the [Google FeedBurner Help Center](http://www.google.com/support/feedburner/bin/answer.py?answer=79408). It is highly probable that once you start utilizing web feeds, you will wonder how you ever lived without.
+  - anchor: newsletter
+    title:
+      de: Newsletter
+    image: /media/pages/impressum/11.jpg
+    body:
+      de: |
+        [Anmeldung für den Circlefly Newsletter](/newsletter/). Mit dem Newsletter erhalten Sie aktuelle und zusätzliche Nachrichten, die entweder garnicht oder nur zum Teil auf meiner Webseite erscheinen werden. Geplant sind circa 4 Ausgaben pro Jahr.
+      en: |
+        [Sign up for the Circlefly Newsletter](/en/newsletter/). It is not sent out very often and is new content that is not otherwise part of the site.
+  - anchor: abspann
+    title:
+      de: Abspann
+      en: Some credits
+    image: /media/pages/impressum/1.jpg
+    body:
+      de: |
+        Besten Dank an [Christiane Feser](http://christianefeser.de/), die seit längerem nun schon meine Arbeiten fotografisch dokumentiert. Herzlichen Dank an [Sandra Hart](http://www.flickr.com/photos/plastiksphinx/with/253987027/) dafür, dass sie in San Francisco Fotos meiner Arbeiten anfertigte, dass sie alles für mich lagert und sich als Kuratorin engagiert. Vielen Dank auch an [Horst Ziegler](http://formkabinett.de), der die Fotos für den more.mehr-Katalog machte, und auch ein Dankeschön an Christian Reuther, der für den gleichen Katalog einen Stapel von Transparentpapierarbeiten digitalisierte.
+
+        Besten Dank an [Yukihiro Matsumoto](http://www.rubyist.net/~matz/) dafür, dass er [Ruby](http://www.ruby-lang.org) erschaffen hat, die Programmiersprache unter der diese Webseite läuft. Es macht wirklich Spaß mit Ruby zu arbeiten, und viele der komplizierteren Teile von Circlefly waren damit schnell und leicht zu erstellen.
+
+        [SWX](http://swxformat.org/) ist eine fantastische Art Daten zu einem SWF zu transferieren. [SWX Ruby](http://swxruby.org/) ist die Ruby Implementation, die wir verwenden und schätzen.
+
+        [SWFAddress](http://www.asual.com/swfaddress/) ist eine großartige Weise die vorwärt und rückwärts Tasten am Browser, sowie die Lesezeichen mit SWFs zu nutzen.
+
+        [SWFObject](http://code.google.com/p/swfobject/) ist die eingebettete Javascript Technologie, die wir nutzen, um sowohl HTML als auch SWF Versionen von Circlefly zu liefern. Es ist die kollaborative Leistung von sowohl [Bobby van der Sluis](http://www.bobbyvandersluis.com/) als auch von [Geoff Stearns](http://blog.deconcept.com/), die beide unabhängig von einander schon früher andere SWF Einbindemöglichkeiten erschufen. Es ist großartig diese beiden Autoren nun gemeinsam arbeiten zu sehen.
+
+        Dies sind nur einige der vielen Projekte, die halfen diese Webseite zu erstellen. Es wäre unmöglich alle aufzulisten.
+      en: |
+        A very special thank you to [Christiane Feser](http://christianefeser.de/en) for documenting my work photographically for several years now. Many thanks to [Sandra Hart](http://www.flickr.com/photos/plastiksphinx/with/253987027/) for the photos she took in San Francisco, for storing my pieces, and for being an engaged curator. Thanks to Christian Reuther and [Horst Ziegler](http://formkabinett.de/) for digitalizing and photographing the work that went into the more.mehr-catalogue, and this website.
+
+        Big thanks to [Yukihiro Matsumoto](http://www.rubyist.net/~matz/) for creating [Ruby](http://www.ruby-lang.org), the programming language that runs the site. Ruby is really fun to work with and has made programming most of the more complicated parts of Circlefly quick and enjoyable.
+
+        [SWX](http://swxformat.org/) is a fantastic way to transfer data to an SWF. [SWX Ruby](http://swxruby.org/) is the Ruby implementation that we use and love.
+
+        We use [SWFAddress](http://www.asual.com/swfaddress/) to get the browser back and forward buttons and bookmarks working. Its a great project.
+
+        And [SWFObject](http://code.google.com/p/swfobject/) is the javascript embed technique that we use to provide both HTML and SWF versions of Circlefly. It is the collaborative effort of [Bobby van der Sluis](http://www.bobbyvandersluis.com/) and [Geoff Stearns](http://blog.deconcept.com/) who had both previously and independantly created other SWF embedding methods. It is great to see these two authors working together.
+
+        These are just a few of the many projects that helped make this site. It would be impossible to list them all.
+  - anchor: impressum
+    title:
+      de: Impressum
+    image: /media/pages/impressum/4.jpg
+    body:
+      de: |
+        Kathrin Feser\
+        Lodenstraße 9\
+        97209 Veitshöchheim\
+        0931.9911313\
+        kathrin at circlefly punkt de
+
+        SteuerNr.: 257/236/10934
+      en: |
+        Kathrin Feser\
+        Lodenstraße 9\
+        97209 Veitshöchheim\
+        +49.931.9911313\
+        kathrin at circlefly dot de\
+        Germany
+
+        TaxNr.: 257/236/10934

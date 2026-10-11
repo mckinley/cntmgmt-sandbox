@@ -1,0 +1,36 @@
+title:
+  de: Mafia-Boxen.
+  en: Mafia-Boxes
+order: 90
+lang: de
+translation: reviewed
+description:
+  de: |
+    Basierend auf neapolitanischen Gesten, Sprüchen und Szenen. Inspiriert durch die Heiligenschreine in den engen Gassen und versteckten Winkeln der Altstadt, im Besonderen des Spanischen Viertels.\
+    Tusche auf 8 Schichten Karton mit cut-out im Glasschrein mit Holz.\
+    circa 25 x 25 x 18 cm\
+    2004 | 2006
+  en: |
+    The boxed stories are based on gestures, phrases and everyday sceneries seen in Naples, Italy. Inspired by the shrines in small and narrow alleys and corners of the old downtown, in particular the Spanish Quarter.\
+    Ink on 8 layers of cardboard cut-outs in glass-shrine with wood.\
+    approx. 25 × 25 × 18 cm\
+    2004 | 2006
+works:
+  - slug: c-aggia-fa-was-kann-man-da-schon-tun
+    src: /media/gallery/mafia-boxen/MafiaBox2.jpg
+    title: c'aggia fa? (was kann man da schon tun?)
+  - slug: n-antecchia-etwas
+    src: /media/gallery/mafia-boxen/MafiaBox3.jpg
+    title: n'antecchia (etwas...)
+  - slug: marenaro
+    src: /media/gallery/mafia-boxen/MafiaBox5.jpg
+    title: marenaro
+  - slug: che-vvvo-cchiu-was-willst-du-von-mir
+    src: /media/gallery/mafia-boxen/MafiaBox1.jpg
+    title: che vvvo cchiu? (was willst du von mir?)
+  - slug: ce-vedimmo-wir-sehn-uns
+    src: /media/gallery/mafia-boxen/MafiaBox6.jpg
+    title: ce vedimmo (wir sehn uns)
+  - slug: uffa-m-hescucciato-verdammt-das-nervt
+    src: /media/gallery/mafia-boxen/MafiaBox4.jpg
+    title: uffa, m'hescucciato! (verdammt, das nervt!)

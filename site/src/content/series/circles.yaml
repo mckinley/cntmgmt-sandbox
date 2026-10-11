@@ -1,0 +1,36 @@
+title:
+  de: circles
+order: 140
+lang: de
+translation: reviewed
+description:
+  de: |
+    Öl auf Leinwand\
+    120 x 120 cm\
+    2010
+  en: |
+    oil on canvas\
+    4′ × 4′\
+    2010
+cover: /media/gallery/circles/cover-1.jpg
+works:
+  - slug: leinwand-nummer-eins
+    src: /media/gallery/circles/1.jpg
+    title: Leinwand Nummer eins
+    caption:
+      en: canvas number one
+  - slug: leinwand-nummer-zwei
+    src: /media/gallery/circles/2.jpg
+    title: Leinwand Nummer zwei
+  - slug: leinwand-nummer-drei
+    src: /media/gallery/circles/3.jpg
+    title: Leinwand Nummer drei
+  - slug: leinwand-nummer-vier
+    src: /media/gallery/circles/4.jpg
+    title: Leinwand Nummer vier
+  - slug: leinwand-nummer-fuenf
+    src: /media/gallery/circles/5.jpg
+    title: Leinwand Nummer fünf
+  - slug: leinwand-nummer-sieben
+    src: /media/gallery/circles/7.jpg
+    title: Leinwand Nummer sieben

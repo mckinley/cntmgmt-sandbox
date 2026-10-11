@@ -1,0 +1,20 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fake deploy (fails when content contains FAIL_DEPLOY)
+        run: |
+          if grep -rq FAIL_DEPLOY site/src/content; then
+            echo "Simulated deploy failure"; exit 1
+          fi
+          echo "Simulated deploy ok"

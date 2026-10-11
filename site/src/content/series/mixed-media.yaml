@@ -1,0 +1,99 @@
+title:
+  de: Mixed Media.
+  en: Mixed Media
+order: 70
+lang: de
+translation: reviewed
+description:
+  de: |
+    Tusche, Acryl, Pigment, Papier, Financial Times, Mylar, Besenborsten, Verschlüsse, Holz, Kunstharz.\
+    Seit 2004
+  en: |
+    Ink, acrylic, pigment, paper, mylar, wood, resin.\
+    since 2004
+works:
+  - slug: tafel-iii
+    src: /media/gallery/mixed-media/Wei_erRahmen02.jpg
+    title: Tafel III
+  - slug: waxb3
+    src: /media/gallery/mixed-media/waxb3.jpg
+    title: Kleinkapitel
+  - slug: wax2
+    src: /media/gallery/mixed-media/wax2.jpg
+    title: Streifzüge
+  - slug: mirando
+    src: /media/gallery/mixed-media/pap4.jpg
+    title: mirando
+  - slug: wax3
+    src: /media/gallery/mixed-media/wax3.jpg
+    title: Streifzüge
+  - slug: tafel-iv
+    src: /media/gallery/mixed-media/Wei_erRahmen05.jpg
+    title: Tafel IV
+  - slug: waxb6
+    src: /media/gallery/mixed-media/waxb6.jpg
+    title: Kleinkapitel
+  - slug: wax1
+    src: /media/gallery/mixed-media/wax1.jpg
+    title: Streifzüge
+  - slug: geldw2
+    src: /media/gallery/mixed-media/Geldw2.jpg
+    title: Geldwäsche
+  - slug: waxb1
+    src: /media/gallery/mixed-media/waxb1.jpg
+    title: Kleinkapitel
+  - slug: geldw3
+    src: /media/gallery/mixed-media/Geldw3.jpg
+    title: Geldwäsche
+  - slug: tafel-ii
+    src: /media/gallery/mixed-media/Wei_erRahmen04.jpg
+    title: Tafel II
+  - slug: historias
+    src: /media/gallery/mixed-media/pap2.jpg
+    title: historias
+  - slug: wax4
+    src: /media/gallery/mixed-media/wax4.jpg
+    title: Streifzüge
+  - slug: la-planta
+    src: /media/gallery/mixed-media/pap3.jpg
+    title: la planta
+  - slug: geldw1
+    src: /media/gallery/mixed-media/Geldw1.jpg
+    title: Geldwäsche
+  - slug: waxb4
+    src: /media/gallery/mixed-media/waxb4.jpg
+    title: Kleinkapitel
+  - slug: waxb5
+    src: /media/gallery/mixed-media/waxb5.jpg
+    title: Kleinkapitel
+  - slug: el-millonario
+    src: /media/gallery/mixed-media/pap1.jpg
+    title: el millonario
+  - slug: waxb2
+    src: /media/gallery/mixed-media/waxb2.jpg
+    title: Kleinkapitel
+  - slug: geldw4
+    src: /media/gallery/mixed-media/Geldw4.jpg
+    title: Geldwäsche
+  - slug: tafel-i
+    src: /media/gallery/mixed-media/Wei_erRahmen01.jpg
+    title: Tafel I
+  - slug: cosi
+    src: /media/gallery/mixed-media/cosi.jpg
+    title: così
+  - slug: vierklang
+    src: /media/gallery/mixed-media/Vierklang.jpg
+    title: Vierklang.
+  - slug: peng-peng
+    src: /media/gallery/mixed-media/PengPeng.jpg
+    title: Peng! - Peng!
+    caption:
+      de: |-
+        Siebdruck
+        Auflage 50 Stück
+        60 x 40 cm
+  - slug: greed
+    src: /media/gallery/mixed-media/greed.jpg
+    title: greed.
+    caption:
+      de: greed as of the seven deadly sins.

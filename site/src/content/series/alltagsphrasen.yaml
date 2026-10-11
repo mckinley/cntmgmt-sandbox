@@ -1,0 +1,83 @@
+title:
+  de: Alltagsphrasen.
+  en: Communication Pieces.
+order: 60
+lang: de
+translation: reviewed
+description:
+  de: |
+    Tusche auf Papier und Transparentpapier mit cut-out.\
+    50×70 cm\
+    seit 2004
+  en: |
+    everyday text phrases and snippets.\
+    Ink on paper and tracing paper with cut-out.\
+    50 × 70 cm\
+    since 2004
+works:
+  - slug: killer-application
+    src: /media/gallery/alltagsphrasen/Transparent02.jpg
+    title: killer application
+  - slug: super-glue-and-soy-sauce
+    src: /media/gallery/alltagsphrasen/Transparent07.jpg
+    title: super glue and soy sauce
+  - slug: cynism
+    src: /media/gallery/alltagsphrasen/Transparent03.jpg
+    title: cynism
+  - slug: kitchen-burglar
+    src: /media/gallery/alltagsphrasen/Transparent08.jpg
+    title: kitchen burglar
+  - slug: back-door-men
+    src: /media/gallery/alltagsphrasen/Transparent05.jpg
+    title: back-door-men
+  - slug: ecco-perche
+    src: /media/gallery/alltagsphrasen/cp2007_3.jpg
+    title: ecco perché
+  - slug: translator
+    src: /media/gallery/alltagsphrasen/Transparent10.jpg
+    title: translator
+  - slug: comfort-food
+    src: /media/gallery/alltagsphrasen/Transparent06.jpg
+    title: comfort food
+  - slug: weird
+    src: /media/gallery/alltagsphrasen/cp2007_4.jpg
+    title: weird
+  - slug: hangover
+    src: /media/gallery/alltagsphrasen/cp2006_1.jpg
+    title: hangover
+  - slug: restare-preoccupato
+    src: /media/gallery/alltagsphrasen/cp2007_1.jpg
+    title: restare preoccupato
+  - slug: conversation-at-a-party
+    src: /media/gallery/alltagsphrasen/Transparent01.jpg
+    title: conversation at a party
+  - slug: la-piattola
+    src: /media/gallery/alltagsphrasen/cp2007_2.jpg
+    title: la piattola
+  - slug: 4-the-speaker
+    src: /media/gallery/alltagsphrasen/Transparent13.jpg
+    title: 4 the speaker
+  - slug: random-street-corner
+    src: /media/gallery/alltagsphrasen/Transparent09.jpg
+    title: random street corner
+  - slug: astroglide
+    src: /media/gallery/alltagsphrasen/cp2007_7.jpg
+    title: Astroglide
+  - slug: nine-to-five
+    src: /media/gallery/alltagsphrasen/Transparent14.jpg
+    title: nine-to-five
+  - slug: tale-of-woe
+    src: /media/gallery/alltagsphrasen/Transparent11.jpg
+    title: tale of woe
+  - slug: smoke-signals
+    src: /media/gallery/alltagsphrasen/Transparent04.jpg
+    title: smoke signals
+  - slug: pompous-or-peachy
+    src: /media/gallery/alltagsphrasen/cp2007_5.jpg
+    title: pompous or peachy
+  - slug: 1-800-talk
+    src: /media/gallery/alltagsphrasen/Transparent12.jpg
+    title: 1-800-TALK
+  - slug: bulletproof
+    src: /media/gallery/alltagsphrasen/cp2007_6.jpg
+    title: bulletproof

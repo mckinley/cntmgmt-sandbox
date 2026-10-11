@@ -1,0 +1,87 @@
+title:
+  en: "\"nitty-gritty blender\""
+order: 40
+lang: en
+translation: none
+description:
+  en: |
+    Photos taken during the past 7 years in San Francisco and Oakland, CA.\
+    Images are partially altered and collaged.\
+    "nitty-gritty blender" was my last solo show held at the BBK-gallery in Würzburg, Germany in April of 2016.
+cover: /media/gallery/nitty-gritty-blender/cover-wish-bone.jpg
+works:
+  - slug: wish-bone
+    src: /media/gallery/nitty-gritty-blender/wish-bone.jpg
+    title: wish bone
+  - slug: good-luck
+    src: /media/gallery/nitty-gritty-blender/Good-Luck.jpg
+    title: Good Luck
+  - slug: the-streets-of-san-francisco
+    src: /media/gallery/nitty-gritty-blender/Streets-of-SF.jpg
+    title: The Streets of San Francisco
+  - slug: mailbox-man
+    src: /media/gallery/nitty-gritty-blender/mailboxMan.jpg
+    title: MailBox Man
+  - slug: road-twist
+    src: /media/gallery/nitty-gritty-blender/road-twist.jpg
+    title: Road Twist
+  - slug: west-oakland
+    src: /media/gallery/nitty-gritty-blender/West-Oakland.jpg
+    title: West Oakland
+  - slug: pigeon
+    src: /media/gallery/nitty-gritty-blender/pigeon.jpg
+    title: pigeon
+  - slug: sycamore-street-under-the-freeway-oakland
+    src: /media/gallery/nitty-gritty-blender/Sycamore-Street.jpg
+    title: Sycamore Street, under the freeway, Oakland
+  - slug: west-street-oakland
+    src: /media/gallery/nitty-gritty-blender/West-Street.jpg
+    title: West Street, Oakland
+  - slug: pier-26-san-francisco
+    src: /media/gallery/nitty-gritty-blender/Pier-26.jpg
+    title: Pier 26, San Francisco
+  - slug: mlk-oakland
+    src: /media/gallery/nitty-gritty-blender/MLK.jpg
+    title: MLK, Oakland
+  - slug: lemon
+    src: /media/gallery/nitty-gritty-blender/lemon.jpg
+    title: lemon
+  - slug: night-crime-oakland
+    src: /media/gallery/nitty-gritty-blender/Night-Crime.jpg
+    title: Night Crime, Oakland
+  - slug: the-nitty-gritty
+    src: /media/gallery/nitty-gritty-blender/The-Nitty-Gritty.jpg
+    title: The Nitty-Gritty
+  - slug: california-dreamin-the-cops
+    src: /media/gallery/nitty-gritty-blender/The-Cops.jpg
+    title: California Dreamin’ - The Cops
+  - slug: california-dreamin-sfmuni
+    src: /media/gallery/nitty-gritty-blender/SFMuni.jpg
+    title: California Dreamin’ - SFMuni
+  - slug: california-dreamin-stoye
+    src: /media/gallery/nitty-gritty-blender/Stoye.jpg
+    title: California Dreamin’ - Stoye
+  - slug: california-dreamin-pity-y
+    src: /media/gallery/nitty-gritty-blender/Pit_y.jpg
+    title: California Dreamin’ - Pity'y
+  - slug: california-dreamin-mexican
+    src: /media/gallery/nitty-gritty-blender/Mexican.jpg
+    title: California Dreamin’ - Mexican
+  - slug: guitar-man
+    src: /media/gallery/nitty-gritty-blender/Guitar-Man.jpg
+    title: Guitar Man
+  - slug: california-dreamin-samba-funk
+    src: /media/gallery/nitty-gritty-blender/Samba-Funk.jpg
+    title: California Dreamin’ - Samba Funk
+  - slug: california-dreamin-bleach-blond-kraut
+    src: /media/gallery/nitty-gritty-blender/bleach-blond-kraut.jpg
+    title: California Dreamin’ - Bleach Blond Kraut
+  - slug: california-dreamin-attitude
+    src: /media/gallery/nitty-gritty-blender/attitude.jpg
+    title: California Dreamin’ - attitude
+  - slug: california-dreamin-folsom-street
+    src: /media/gallery/nitty-gritty-blender/Folsom-Street.jpg
+    title: California Dreamin’ - Folsom Street
+  - slug: california-dreamin-tayeb
+    src: /media/gallery/nitty-gritty-blender/Tayeb.jpg
+    title: California Dreamin’ - Tayeb
