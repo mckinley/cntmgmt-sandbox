@@ -14,8 +14,8 @@
       "mode": "branch",
       "urlPattern": "https://{branch}.cntmgmt-sandbox.invalid",
       "signal": {
-        "type": "status",
-        "context": "cntmgmt/preview"
+        "type": "deployment",
+        "environment": "Preview"
       }
     }
   },
