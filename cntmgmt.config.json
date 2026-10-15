@@ -9,6 +9,14 @@
         "type": "check",
         "name": "deploy-site"
       }
+    },
+    "preview": {
+      "mode": "branch",
+      "urlPattern": "https://{branch}.cntmgmt-sandbox.invalid",
+      "signal": {
+        "type": "status",
+        "context": "cntmgmt/preview"
+      }
     }
   },
   "ui": {
